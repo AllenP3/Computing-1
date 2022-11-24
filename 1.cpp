@@ -154,6 +154,8 @@ int main(){
 *
 *
 *
+
+
 --Series of Numbers--
 
 #include <iostream>
@@ -185,7 +187,9 @@ int main(){
     }
 }
 
---Babylonian Algorithm (or Heron's Formula)--*/
+
+
+--Babylonian Algorithm (or Heron's Formula)--
 #include <iostream>
 
 using namespace std;
@@ -215,5 +219,51 @@ int main(){
     while( precision > 1);
 
         cout<<"Square root of " << n << " equals : " << guess;
-    
+    }
+
+
+
+--Running Speed, Space--
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+    int kph, mpk; 
+
+    cout << "Enter speed in kilometers per hour: ";
+    cin >> kph;
+    mpk = 60/kph;
+    int mpk_int = static_cast<int>(mpk);
+    cout <<kph<<" kilometers per hour equals "<< mpk_int << " minutes and " << (mpk - mpk_int)*60 <<" seconds.";
+}
+Problem 4 : Speed of Sound
+*/
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main(){
+
+    int s_temp, e_temp, d_temp, new_temp;
+    double v = 0.00;
+    cout << "Enter the starting temperature, in degrees Celsius: ";
+    cin >> s_temp;
+    cout << "Enter the ending temperature, in degrees Celsius: ";
+    cin >> e_temp;
+
+    d_temp = e_temp - s_temp;
+    int d_temp_int = static_cast<int>(d_temp);
+
+    for(int counter = 0; counter <= d_temp_int; counter++){
+        new_temp = s_temp + counter;
+        v = 331.3 + (0.61*new_temp);
+        cout << "At " << s_temp + counter<<" degrees celsius the velocity of sound is ";
+        cout<<fixed<<showpoint;
+        cout << setprecision(2);
+        cout<<v<<"m/s"<<endl;
+    }
 }
