@@ -5,7 +5,7 @@
 
  return 0;
  
-~~Continue Statement, Breaks, ||, &&, !~~
+~~Continue Statement, Break, ||, &&, !~~
 
     char input;
 
