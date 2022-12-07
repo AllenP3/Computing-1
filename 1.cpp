@@ -402,7 +402,7 @@ cout << "Your name is: " << fullname;
 //Workarouund
 
 }
-*/
+
 #include <iostream>
 #include <string>
 
@@ -410,9 +410,26 @@ using namespace std;
 
 void printsize(string x){
 
-    cout << "string\""<< x <<"\"is of size"<<x.size();
+    cout << "string \""<< x <<"\" is of size "<<x.size();
 }
-int maint(){
+
+int main(void){
     printsize("Allen");
-    return 0;
+
+}
+*/
+#include <iostream>
+
+using namespace std;
+
+int power(int x, int y){
+    int results = x;
+    for(int c = 0; c < (y-1); c++){
+        results = results * x;
+    }
+       return results;
+}
+int main(){
+    cout << power(3, 4);
+    
 }
