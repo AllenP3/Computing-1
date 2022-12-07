@@ -3,7 +3,8 @@
     "iostream": "cpp",
     "ostream": "cpp",
     "iomanip": "cpp",
-    "random": "cpp"
+    "random": "cpp",
+    "string": "cpp"
   },
   "C_Cpp_Runner.msvcBatchPath": "",
   "C_Cpp_Runner.cCompilerPath": "C:/msys64/mingw64/bin/gcc.exe",

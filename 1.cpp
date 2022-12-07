@@ -266,7 +266,139 @@ int main(){
         cout << setprecision(2);
         cout<<v<<"m/s"<<endl;
     }
-}*/
+}
+7/12/2022
+Campus 2 Tutorial - Khader
+
+~~~~Strings~~~~
+
+Strings store text
+eg. string greeting = "Hello";
+
+-Always use #include <string>
+-These can also be used as arrays
+eg. int main(){
+    string greeting = "Hello";
+    cout << greeting[1]<<greeting[4];
+    return 0;
+}
+  --this will output e and o
 
 #include <iostream>
+#include <string>
 
+using namespace std;
+
+int main(){
+    string greeting = "Hello";
+
+    cout << greeting[1]<<endl;
+
+    greeting = greeting + " World";
+    cout << greeting<<endl;
+
+    string firstname = "Allen";
+    string lastname = " Prasad";
+    string fullname = firstname + lastname;
+    
+    alternative form :
+    string fullname = firstname.append(lastname)
+    append returns the value 
+    
+    cout << fullname;
+    return 0;
+}
+Adding number and strings
+
+
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+   string x = "10";
+int y = 20;
+char z = x[0] + y; 
+
+cout << z;
+}
+
+-String Length
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+    string txt = "ALLEN";
+    cout << "the length of the string is "<<txt.length();
+}
+
+-Access Strings
+  Characters in a string can be accessed by referring to its 
+  index number inside square brackets.
+
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+    string txt = "ALLEN";
+    cout << txt[0];
+}
+
+-Change String characters
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+string myString = "Hello";
+myString[0] = 'J';
+cout << myString;
+// Outputs Jello instead of Hello
+}
+
+-Special Characters in Strings
+
+string txt = "We are the so-called \"Vikings\" from the north.";
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+string txt1 = "Its\'s alright";
+string txt2 = "The character \\ is called backslash.";
+string txt3 = "We are the so-called \"Vikings\" from the north.";
+}
+
+-User Input Strings
+*/
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+string fullName;
+cout << "Type your full name: ";
+getline (cin, fullName);
+cout << "Your name is: " << fullName;
+/*
+cout << "type your full name: ";
+cin >> fullname;
+cout << "Your name is: " << fullname;
+//Problem
+//Workarouund*/
+
+}
