@@ -382,7 +382,7 @@ string txt3 = "We are the so-called \"Vikings\" from the north.";
 }
 
 -User Input Strings
-*/
+
 
 #include <iostream>
 #include <string>
@@ -399,6 +399,20 @@ cout << "type your full name: ";
 cin >> fullname;
 cout << "Your name is: " << fullname;
 //Problem
-//Workarouund*/
+//Workarouund
 
+}
+*/
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void printsize(string x){
+
+    cout << "string\""<< x <<"\"is of size"<<x.size();
+}
+int maint(){
+    printsize("Allen");
+    return 0;
 }
