@@ -417,7 +417,7 @@ int main(void){
     printsize("Allen");
 
 }
-*/
+
 #include <iostream>
 
 using namespace std;
@@ -432,4 +432,121 @@ int power(int x, int y){
 int main(){
     cout << power(3, 4);
     
+}
+
+Arrays in C++
+
+
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main(){
+    const int kArraySize = 12;
+    int n[kArraySize];
+
+    for (int i = 0; i < kArraySize; i++)
+    n[i] = i;
+    cout << "Element" << setw(13) << "Value" <<endl;
+
+    for (int j = 0; j < kArraySize; j++)
+    cout << setw(3) << "n[" << j << "] =" << setw(13) << n[j] << endl;
+    return 0;
+    
+}
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main(){
+    int n[] = {0,1,2,3,4,5};
+    int array_size = sizeof(n) / sizeof(int);
+    cout << sizeof(n)<<endl;
+    cout << array_size;
+
+    
+}
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+int Sum(int x, int y);
+int main(){
+    int a[] = {1, 2, 3};
+    int b[] = {1, 2, 3};
+    cout << Sum(a[0], b[1]);
+}
+int Sum(int x, int y){
+    return x + y;
+}
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+int Sum(int a[], int y);
+int main(){
+    int Allen[] = {1, 2, 3};
+    int arraysize = sizeof(Allen) / sizeof(int);
+    cout << "Sum(a, "<<arraysize<<") = "<<Sum(Allen, arraysize);
+}
+int Sum(int a[], int y){
+    int sum = 0;
+    for(int i = 0; i < y; i++){
+        sum += a[i];
+    }
+    return sum;
+}
+
+
+#include "ArrayIO.cpp"
+#include <iostream>
+
+using namespace std;
+
+int main(){ 
+    const int kMaxSize = 100; 
+    int a[kMaxSize] = { 0 }, size; 
+
+    Read(a, size, kMaxSize);
+    cout << "The array has " << size << " elements: "; 
+
+    Print(a, size); 
+    cout << endl;
+    return 0;} 
+
+--Two dimensional Arrays--
+*/
+#include <iostream>
+
+using namespace std;
+
+void printArray( const int[][3]);
+const int rows = 2;
+const int columns = 3;
+
+int main(){
+    int array1 [rows][columns] = {{1, 2, 3}, {4, 5, 6}};
+    int array2 [rows][columns] = {1, 2, 3, 4, 5};
+    int array3 [rows][columns] = {{1, 2}, {4}};
+    
+    cout << "Values in array1 by row are:"<<endl;
+    printArray(array1);
+
+    cout << "Values in array2 by row are:"<<endl;
+    printArray(array2);
+
+    cout << "Values in array3 by row are:"<<endl;
+    printArray(array3);
+}
+void printArray(const int a[][columns]){
+
+    for (int i = 0; i < rows; i++){
+        for (int j = 0; j < columns; j++){
+            cout << a[i][j] <<" ";
+        }
+              cout << endl;
+    }
 }
