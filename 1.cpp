@@ -518,7 +518,7 @@ int main(){
     return 0;} 
 
 --Two dimensional Arrays--
-*/
+
 #include <iostream>
 
 using namespace std;
@@ -549,4 +549,68 @@ void printArray(const int a[][columns]){
         }
               cout << endl;
     }
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int x(4);
+    int y = 5;
+    int* x_ptr(nullptr);
+    int* y_ptr(nullptr);
+    x_ptr = &x;
+    y_ptr = &y;
+
+    cout << "\nx = " << x;
+    cout << " x_ptr = " << x_ptr << endl;
+    cout << "\ny = " << y;
+     cout << " y_ptr = " << y_ptr << endl;
+     
+return 0;
+
 }
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int x(4), y(5), t(0);
+    int* x_ptr;
+    int* y_ptr;
+
+    x_ptr = &x;
+    y_ptr = &y;
+
+   cout << x << "  " << y <<endl;
+    t = *y_ptr;
+    y = *x_ptr;
+    x = t;
+    cout << x << "  " << y <<endl;
+}*/
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int b[] = { 10, 20, 30, 40 }; 
+    int* b_ptr = b; 
+
+    cout << "Array b printed with:\n\nArray subscript notation\n";
+    for (int i = 0; i < 4; i++)
+        cout << "b[" << i << "] = " << b[i] << '\n';
+
+    cout << "\nPointer/offset notation where the pointer is the array name\n";
+    for (int offset1 = 0; offset1 < 4; offset1++)
+        cout << "*(b + " << offset1 << ") = "<<*(b + offset1)<<'\n';
+
+    cout << "\nPointer subscript notation\n";
+    for (int j = 0; j < 4; j++)
+        cout << "b_ptr[" << j << "] = " << b_ptr[j] << '\n';
+    cout << "\nPointer/offset notation\n";
+
+    for (int offset2 = 0; offset2 < 4; offset2++)
+    cout << "*(b_ptr + "<<offset2<<") = "<<*(b_ptr + offset2)<<'\n';
+    return 0;
+} 
