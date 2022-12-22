@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include "QuadraticFormula.h"
 #include "QuadraticFormula.cpp"
 using namespace std;
@@ -30,4 +30,34 @@ int main(void)
             cout << "\nShould never get here!";
     };
     return 0;
+}*/
+#include "Linear.h"
+#include <iostream>
+
+int main(){
+    int max_size(4);
+    int a[max_size];
+    int size(0);
+    int& ref_size = size;
+    int key;
+    
+    Read(a, &size, max_size);
+    
+    std::cout << "The array has "<<size<<"elements: ";
+    Print(a, size);
+    
+    std::cout << "Please enter search key: ";
+    std::cin >> key;
+    
+    int value = LinearSearch(a, key, size);
+    
+    if( value == -1){
+        std::cout << "\nSearch key not found among array elements!\n";
+    }
+    else{
+        std::cout << "Search key was found at index: "<< value <<std::endl;
+    }
+    
+    return 0;
+    
 }

@@ -587,7 +587,7 @@ int main(){
     y = *x_ptr;
     x = t;
     cout << x << "  " << y <<endl;
-}*/
+}
 #include <iostream>
 
 using namespace std;
@@ -613,4 +613,106 @@ int main()
     for (int offset2 = 0; offset2 < 4; offset2++)
     cout << "*(b_ptr + "<<offset2<<") = "<<*(b_ptr + offset2)<<'\n';
     return 0;
+}
+
+#include <iostream>
+
+
+int main(){
+
+    int a = 10;
+
+    std::cout << &a << std::endl;
+    int *myptr = &a;
+
+    std::cout << *myptr << std::endl;
+
+    *myptr = 20;
+
+    std::cout << a <<std::endl;
+
+
+    return 0;
 } 
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+    int arr[100];
+
+    cout << &arr <<endl;
+    cout << &arr[0]<<endl;
+    cout << &arr[1]<<endl;
+    cout << &arr[2]<<endl;
+    cout << &arr[3]<<endl;
+    cout << &arr[4]<<endl; 
+    
+    int *ptr = arr;
+    cout << ptr <<endl;
+    return 0;
+
+
+}
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+    int arr[10];
+
+    int *first_post = arr;
+
+    for(int i = 0; i < 10 ; i++){
+        *(first_post + i) = i * 20;
+    }
+    for(int x: arr){
+        cout << x << endl;
+    }
+    
+    return 0;
+}
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+    int a = 10;
+    int *ptr = &a;
+
+    ptr = nullptr;
+
+    return 0;
+}*/
+
+#include <iostream>
+
+using namespace std;
+
+void function1(){
+    std::cout << "I am function one!" <<std::endl;
+}
+
+void function2(){
+    std::cout << "I am function two!" <<std::endl;
+}
+
+int main(){
+
+    void (*myfunc)();
+
+    myfunc = function1;
+
+    myfunc();
+
+    myfunc = function2;
+
+    myfunc();
+    return 0;
+}
