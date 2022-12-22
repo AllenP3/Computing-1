@@ -615,6 +615,9 @@ int main()
     return 0;
 }
 
+
+~~NeuralNine Youtube session~~
+~~~Pointers~~~
 #include <iostream>
 
 
@@ -689,7 +692,7 @@ int main(){
     ptr = nullptr;
 
     return 0;
-}*/
+}
 
 #include <iostream>
 
@@ -716,3 +719,5 @@ int main(){
     myfunc();
     return 0;
 }
+~~End of Youtube Session~~
+*/
