@@ -719,5 +719,26 @@ int main(){
     myfunc();
     return 0;
 }
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    
+    int var = 8;
+    int* ptr = &var;
+    *ptr += 10;
+    cout << var;
+
+}
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    char* buffer = new char[8];
+    char** ptr = &buffer;
+}
 ~~End of Youtube Session~~
 */
