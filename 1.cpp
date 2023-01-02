@@ -741,4 +741,71 @@ int main(){
     char** ptr = &buffer;
 }
 ~~End of Youtube Session~~
-*/
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int b[] = {10, 20, 30, 40};
+    int* b_ptr = b;
+
+    cout << "Array b printed with: \n\n Array subscript notation\n";
+    for(int i = 0; i < 4; i++){
+        cout << "b["<<i<<"] = "<<b[i] << '\n';
+    }
+    cout << "\nPointer/offset notation where the pointer is the array name\n";
+    
+    for (int offset1 = 0; offset1 < 4; offset1++)
+        cout << "*(b + " << offset1 << ") = "<<*(b + offset1)<<'\n';
+
+    cout << "\nPointer subscript notation\n";
+    
+    for (int j = 0; j < 4; j++)
+        cout << "b_ptr[" << j << "] = " << b_ptr[j] << '\n';
+   
+    cout << "\nPointer/offset notation\n";
+
+   
+    for (int offset2 = 0; offset2 < 4; offset2++)
+        cout << "*(b_ptr + "<<offset2<<") = "<<*(b_ptr + offset2)<<'\n';
+    
+    return 0;   
+}
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    char c;
+    int i;
+    double d;
+    int array[20];
+    int* ptr = array;
+
+    cout << "sizeof c = "<< sizeof(c)
+    << "\tsizeof(char) = " << sizeof(char)
+    << "\nsizeof i = " << sizeof(i)
+    << "\tsizeof(int) = " << sizeof(int)
+    << "\nsizeof d = " << sizeof(d)
+    << "\tsizeof(double) = " << sizeof(double)
+    << "\nsizeof array = " << sizeof(array)
+    << "\nsizeof ptr = " << sizeof(ptr) << endl;
+return 0;
+
+}*/
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+    string fullname;
+
+    cout << "Enter Full name:";
+    getline(cin, fullname);
+    cout << fullname;
+    return 0;
+}
