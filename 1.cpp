@@ -794,7 +794,7 @@ int main(){
     << "\nsizeof ptr = " << sizeof(ptr) << endl;
 return 0;
 
-}*/
+}
 
 #include <iostream>
 #include <string>
@@ -807,5 +807,26 @@ int main(){
     cout << "Enter Full name:";
     getline(cin, fullname);
     cout << fullname;
+    return 0;
+}*/
+// Find all errors in the following C++ program.
+// Change the code so that it compiles.
+// Do not change the functionality of the function.
+// Compiling has been disabled.
+// Do not forget to save your results.
+
+
+#include <iostream>
+
+// This function should return the smallest element of a float array. 
+float find_smallest_array_element(float arr[], const int size) {
+
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[0] < arr[i])
+            arr[0] = arr[i];
+    }
+    std::cout << "Smallest element = " << arr[0];
+
     return 0;
 }
