@@ -808,7 +808,7 @@ int main(){
     getline(cin, fullname);
     cout << fullname;
     return 0;
-}*/
+}
 // Find all errors in the following C++ program.
 // Change the code so that it compiles.
 // Do not change the functionality of the function.
@@ -829,4 +829,5 @@ float find_smallest_array_element(float arr[], const int size) {
     std::cout << "Smallest element = " << arr[0];
 
     return 0;
-}
+}*/
+
