@@ -1,3 +1,6 @@
+/*practiced online
+  for later practice : Try and implement vector of arrays, passing arrays to a function (and getting a decent output)*/
+
 #include <iostream>
 
 
