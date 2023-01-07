@@ -118,4 +118,35 @@ int main(){
       cout<<endl;
     GetExtremes(max, min, a, num);
     cout << "Minimum: "<<min<<" Maximum : "<<max;
+}
+
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+
+using namespace std;
+
+double InnerProduct(const double a[], const double b[], int size){
+    static double answer = 0;
+    for(int i = 0; i < size; i++){
+        answer += a[i]*b[i];
+    }
+    return answer;
+}
+
+int main(){
+    double a[3] = {};
+    double b[3] = {};
+    int size = 2;
+    
+    cout << "The first vector is: ";
+    for(int i = 0; i < size; i++){
+        cin >> a[i];
+    }
+    cout << "The second vector is: ";
+    for(int i = 0; i < size; i++){
+        cin >> b[i];
+    }
+
+    cout << "Their inner product is: "<<fixed<<setprecision(2)<<InnerProduct(a, b, size);
 }*/
