@@ -1,3 +1,5 @@
+/*Problem 1
+
 #include <iostream>
 
 using namespace std;
@@ -63,3 +65,35 @@ int main(){
 
     
 }
+
+Problem 2
+
+#include <iostream>
+
+using namespace std;
+
+long fac(int n){
+    if(n < 0)
+        return 0;
+
+    int f = 1;
+    while (n > 1){
+        f = f * n--;
+    }
+    return f;
+}
+
+long Perm(int n, int k){
+    return fac(n) / fac((n-k));
+
+}
+int main(){
+    int n, k;
+    cout << "Enter number of elements in set: ";
+    cin >> n;
+    cout << "Enter number of elements to be taken out of the set: ";
+    cin >> k;
+    cout << "The number of permutations of " <<n<<" out of "<<k<<" is "<<Perm(n, k);
+
+    
+}*/
