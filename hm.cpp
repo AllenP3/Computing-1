@@ -82,4 +82,40 @@ int main(){
     average = sum/num;
     cout << "The average of the array elements is: "<<average<<endl;
 }
-    */
+ Problem 3   
+#include <iostream>
+
+using namespace std;
+
+void GetExtremes(double& max_ref, double& min_ref, const double a[], int size){
+    max_ref = a[0];
+    min_ref = a[0];
+    
+    for(int i = 0; i < size; i++){
+      if(max_ref < a[i])
+         max_ref= a[i];
+   }
+    for(int i = 0; i < size; i++) {
+      if(min_ref > a[i])
+         min_ref= a[i];
+   }
+    }
+int main(){
+
+    double a[100] = {0};
+    int num = 0;
+   double max, min;
+
+    cout << "Enter integers. Terminate with EOF."<<endl;
+    
+    do {cout << "a[" << num << "]: ";}
+    while (cin >> a[num++]);
+    --num;
+    cout << "The array has "<<num<<" elements: ";
+    for(int i = 0; i<num; i++){
+        cout << a[i]<<" ";
+    }
+      cout<<endl;
+    GetExtremes(max, min, a, num);
+    cout << "Minimum: "<<min<<" Maximum : "<<max;
+}*/
