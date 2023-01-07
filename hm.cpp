@@ -50,4 +50,36 @@ int main(){
    cout <<endl;}
     return 0;
 
-}*/
+}Problem 2
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+    int a[100] = {0};
+    int num = 0;
+    int sum = 0;
+    double average = 0;
+
+    cout << "Enter integers. Terminate with EOF."<<endl;
+    
+    do {cout << "a[" << num << "]: ";}
+    while (cin >> a[num++]);
+    --num;
+    cout << "The array has "<<num<<" elements: ";
+    
+    for(int i = 0; i<num; i++){
+        cout << a[i]<<" ";
+    }
+      cout<<endl;
+    
+    for(int i = 0; i<num; i++){
+        sum = sum + a[i];
+    }
+    cout << "The sum of the array elements is: "<<sum<<endl;
+    average = sum/num;
+    cout << "The average of the array elements is: "<<average<<endl;
+}
+    */
