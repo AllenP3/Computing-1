@@ -831,3 +831,12 @@ float find_smallest_array_element(float arr[], const int size) {
     return 0;
 }*/
 
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    string str = "Allen";
+    cout << "The length of the string is " << str.size();
+
+}
