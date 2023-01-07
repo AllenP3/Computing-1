@@ -150,4 +150,34 @@ int main(){
     cout << "Enter a floating point number and an integer: ";
     cin >> num1 >> num2;
     cout << "Power("<<num1<<", "<<num2<<") = "<<Power(num1, num2);
+}
+Problem 5
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+void ComputeSphere(double& V, double& S, double r=1.0){
+    S = 4 * 3.141592 * r*r;
+    V = (S*r) / 3;
+}
+
+int main(){
+
+    double v, s, r;
+
+    cout << "Enter the radius of a sphere: ";
+    cin >> r;
+    ComputeSphere(v, s, r);
+    cout << "The sphere's surface is: " << s << endl;
+    cout << "The sphere's volume is: "<<v <<endl;
 }*/
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    
+}
