@@ -829,6 +829,38 @@ float find_smallest_array_element(float arr[], const int size) {
     std::cout << "Smallest element = " << arr[0];
 
     return 0;
+}
+
+#include <iostream>
+
+using namespace std;
+
+int checkdigit(int postal){
+    int sum = 0, m;
+    static int i = 0;
+    
+    while(postal > 0){
+        m = postal&10;
+        sum = sum + m;
+        postal = postal/10;
+    }
+    while(sum % 10 != 0){
+        sum = sum + 1;
+        i++;
+    }
+}
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+
+    int i = 2021;
+    string s = to_string(i);
+
+    cout << s[0];
 }*/
 
 #include <iostream>
@@ -836,7 +868,7 @@ float find_smallest_array_element(float arr[], const int size) {
 using namespace std;
 
 int main(){
-    string str = "Allen";
-    cout << "The length of the string is " << str.size();
+    string s = "Allen";
 
+    cout << size(s);
 }
