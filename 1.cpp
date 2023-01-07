@@ -829,5 +829,14 @@ float find_smallest_array_element(float arr[], const int size) {
     std::cout << "Smallest element = " << arr[0];
 
     return 0;
+}
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+    cout << 2%10;
 }*/
 
