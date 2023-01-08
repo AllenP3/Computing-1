@@ -202,7 +202,7 @@ int main(){
     
 
    
-}Problem 6*/
+}Problem 6
 #include <iostream>
 #include <cmath>
 #include <iomanip>
@@ -246,5 +246,5 @@ int main(){
       cout<<endl;
     
       cout << "The standar deviation of the array elements is: "<<fixed<<setprecision(2)<<StdDev(a, num)<<endl;
-}
+}*/
 
