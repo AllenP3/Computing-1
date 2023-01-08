@@ -149,7 +149,7 @@ int main(){
     }
 
     cout << "Their inner product is: "<<fixed<<setprecision(2)<<InnerProduct(a, b, size);
-}*/
+}
 #include <iostream>
 #define N 3
 using namespace std;
@@ -202,4 +202,49 @@ int main(){
     
 
    
+}Problem 6
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+double StdDev(double x[], int size){
+    double answer = 0;
+    double mean = 0;
+    static double sigmamean = 0.00;
+    static double sum = 0;
+    for (int i = 0; i < size; i++){
+            sum = sum + x[i];
+    }
+    mean = sum / (size);
+    for (int j = 0; j < size; j++){
+        sigmamean = sigmamean + ((x[j] - mean) * (x[j] - mean));
+    }
+    
+    answer = sqrt(sigmamean/(size-1));
+    return answer;
 }
+
+int main(){
+
+    double a[100] = {0};
+    int num = 0;
+    int sum = 0;
+    double average = 0;
+
+    cout << "Enter integers. Terminate with EOF."<<endl;
+    
+    do {cout << "a[" << num << "]: ";}
+    while (cin >> a[num++]);
+    --num;
+    cout << "The array has "<<num<<" elements: ";
+    
+    for(int i = 0; i<num; i++){
+        cout <<fixed<<setprecision(2)<<a[i]<<" ";
+    }
+      cout<<endl;
+    
+      cout << "The standar deviation of the array elements is: "<<fixed<<setprecision(2)<<StdDev(a, num)<<endl;
+}*/
+
