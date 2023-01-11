@@ -8,14 +8,14 @@ const int* LinearSearch(int array[], int key, int size){
     int* fnd = nullptr;
 
     for(int i = 0; i < size; i++){
-        if(array[i] = key){
+        if(array[i] == key){
             fnd = &array[i];
             break;
         }
     }
             if(fnd != nullptr){
-                cout << "Search key found at address "<<fnd;
-                cout << "This address corresponds to the array index position "<<fnd - point;
+                cout << "Search key found at address "<<fnd<<endl;
+                cout << "This address corresponds to the array index position "<<fnd -point;
             }
             else{
                 cout << "Search key not found";
@@ -31,7 +31,8 @@ int main(){
     int key;
      
     cout << "Enter integers. Terminate with EOF."<<endl;
-    
+    cout << "Please enter search key: ";
+    cin >> key;
     do {cout << "a[" << num << "]: ";}
     while (cin >> a[num++]);
     --num;
@@ -39,9 +40,8 @@ int main(){
      for(int i = 0; i<num; i++){
         cout <<a[i]<<" ";
     }
-      cout<<endl;
-    cout << "Please enter search key: ";
-    cin >> key;
+    cout<<endl;
+    LinearSearch(a, key, num);
     return 0;
    
     
