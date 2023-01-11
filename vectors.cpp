@@ -16,9 +16,13 @@ void Print(const vector<vector<int>>&matrix_ref){
 }
 int main(void) {
    
-   vector<int>v = {1,2,3};
-    int s = 0;
-    v.insert(v.end(), 5);
-    cout <<v[0];
+    vector<int>v = {1,2,3};
 
+    for(int i = 0; i < v.size(); i++){
+        cout << v[i];
+    }
+    cout << endl;
+    for(auto i = v.begin(); i != v.end(); ++i){
+        cout << *i;
+    }
 }

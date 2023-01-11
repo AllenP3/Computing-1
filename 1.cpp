@@ -861,7 +861,7 @@ int main(){
     string s = to_string(i);
 
     cout << s[0];
-}*/
+}
 
 #include <iostream>
 
@@ -879,4 +879,47 @@ int main(){
         }
         cout <<endl;
     }
+}
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+    int a[] = {6,1,2,3,4};
+    int* point = &a[0];
+    int* pointend = &a[3];
+
+    cout << point<<endl;
+    cout << pointend<<endl;
+
+    cout << pointend - point;
+}*/
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main(){
+
+    int a[100] = {0};
+    int num;
+    int key;
+     
+
+    cout << "Enter integers. Terminate with EOF."<<endl;
+    
+    do {cout << "a[" << num << "]: ";}
+    while (cin >> a[num++]);
+    --num;
+    cout << "The array has "<<num<<" elements: ";
+    
+    for(int i = 0; i<num; i++){
+        cout <<fixed<<setprecision(2)<<a[i]<<" ";
+    }
+    
+    
+    cout << "Please enter search key: ";
+    cin >> key;
 }
