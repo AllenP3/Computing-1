@@ -1,2 +1,2 @@
-# FHWS
+# THWS
 # Computing 1
