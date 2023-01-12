@@ -895,7 +895,7 @@ int main(){
     cout << pointend<<endl;
 
     cout << pointend - point;
-}*/
+}
 #include <iostream>
 #include <iomanip>
 
@@ -922,4 +922,24 @@ int main(){
     
     cout << "Please enter search key: ";
     cin >> key;
+}*/
+
+#include <iostream>
+
+using namespace std;
+
+int* point(int *a){
+    cout << a <<endl;
+    cout << *a;
+    return a;
+}
+int nonpoint(int *a){
+    cout << a <<endl;
+    cout << *a;
+    return 0;
+}
+int main(){
+    int b = 2;
+    point(&b);
+    nonpoint(&b);
 }
