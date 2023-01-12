@@ -136,7 +136,6 @@ using namespace std;
 
 void Capitalize(char* input_ptr){
     for(int i = 0; i < 79; i++){
-        
     }
 }
 
