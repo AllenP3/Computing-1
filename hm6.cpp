@@ -240,16 +240,23 @@ int main(){
 
 
 using namespace std;
-void reverse(char *set){
-    for(int i = 0; i < strlen(set)/2; i++){
-        char temp = set[i];
-        set[i] = set[strlen(set)-i];
-        set[strlen(set)-i];
-    }
-}
+
+
 
 int main(int argc, char* argv[]){
-    
-    
+
+    char temp;
+    cout << argc <<endl;
+    if(argc >1){
+    for(int i = 1; i < argc/2; i++){
+         temp = *argv[i];
+        *argv[i] = *argv[argc-i];
+        *argv[argc-i] = temp;
+
+    }
+    }
+    for(int i = 1; i<argc; i++){
+        cout << argv[i] <<" ";
+    }
 }
 
