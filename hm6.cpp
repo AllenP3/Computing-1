@@ -235,3 +235,21 @@ int main(){
     return 0;
 }*/
 
+#include <iostream>
+#include <string.h>
+
+
+using namespace std;
+void reverse(char *set){
+    for(int i = 0; i < strlen(set)/2; i++){
+        char temp = set[i];
+        set[i] = set[strlen(set)-i];
+        set[strlen(set)-i];
+    }
+}
+
+int main(int argc, char* argv[]){
+    
+    
+}
+

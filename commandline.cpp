@@ -22,7 +22,6 @@ int main(int argc, char* argv[]){
     int b = stoi(argv[3]);
     cout << a << " + " << b << " = " << add(a, b) << endl;
 
-    cout << "Hello "<< argv[1] << " !" <<endl;
-    
     return 0;
+
 }
