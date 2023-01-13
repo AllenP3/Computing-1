@@ -941,3 +941,12 @@ int main(){
     return 0;
 }*/
 
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+    cout << 5/3;
+}
+

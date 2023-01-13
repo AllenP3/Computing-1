@@ -18,10 +18,6 @@ int main(int argc, char* argv[]){
         return(-1);
     }
 
-    int a = stoi(argv[1]);
-    int b = stoi(argv[3]);
-    cout << a << " + " << b << " = " << add(a, b) << endl;
-
-    return 0;
+   cout << argv[1];
 
 }
