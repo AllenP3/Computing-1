@@ -1,13 +1,13 @@
 #include <iostream>
 #include <string.h>
+#include <cctype>
 
 using namespace std;
 
-void Reverseinputstring(char input_array[], int length){
-    for(int i = 0; i < length/2; i++){
-        char temp = input_array[i];
-        input_array[i] = input_array[length - i - 1];
-        input_array[length-i-1] = temp;
+void Capitalize(char* input_ptr){
+
+    for(int i = 0; i < strlen(input_ptr); i++){
+        input_ptr[i] = toupper(input_ptr[i]);
     }
 }
 
@@ -15,7 +15,7 @@ int main(){
     
     int maxsize = 79;
     char origword[maxsize + 1];
-    int string_length;
+
     
     do{
     cout << "Please enter a line of text: ";
@@ -23,8 +23,8 @@ int main(){
     cin.clear();
     if(*origword){
         cout <<"You entered: "<<"\"" << origword << "\""<<endl;
-        string_length = strlen(origword);
-        cout << "Your input reversed: " << "\"" << origword << "\""<<endl;
+        Capitalize(origword);
+        cout << "Your input capitalized: " << "\"" <<origword<< "\""<<endl;
 
     }
     }

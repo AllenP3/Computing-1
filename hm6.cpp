@@ -1,4 +1,37 @@
-/*Problem 1
+/*
+#include <iostream>
+#include <string.h>
+#include <cmath>
+
+
+using namespace std;
+
+void Capitalize(char* input_ptr){
+    for(int i = 0; i < 79; i++){
+    }
+}
+
+int main(){
+    
+    int maxsize = 79;
+    char origword[maxsize + 1];
+    int string_length;
+    
+    do{
+    cout << "Please enter a word: ";
+    cin.getline(origword, maxsize);
+    cin.clear();
+    if(*origword){
+        cout <<"You entered: "<<"\"" << origword << "\""<<endl;
+        Capitalize(origword);
+        cout << "Your input capitalized: " << origword;
+
+    }
+    }
+    while(*origword);
+    return 0;
+}
+Problem 1
 #include <iostream>
 #include <iomanip>
 
@@ -53,42 +86,7 @@ int main(){
    
     
 }
-#include <iostream>
-#include <iomanip>
 
-using namespace std;
-
-const int* GetMax(int* array[], int size){
-    int *max = array[0];
-    for(int i = 0; i < size-1; i++){
-        if(array[i] <= array[i+1]){
-            max = array[i+1];
-        }
-        }
-        cout << max <<endl;
-        return max;
-    }
-
-int main(){
-
-    int a[] = {0};
-    int num;
-    int *point = &a[0];
-
-    cout << "Enter integers. Terminate with EOF."<<endl;
-    do {cout << "a[" << num << "]: ";}
-    while (cin >> a[num++]);
-    --num;
-    cout << "The array has "<<num<<" elements: ";
-     for(int i = 0; i<num; i++){
-        cout <<a[i]<<" ";
-    }
-    cout << endl;
-    
-    cout << "Maximum : ";
-    cout<<endl;
-    return 0;
-}
 
 Problem3
 
@@ -125,23 +123,64 @@ int main(){
     }
     while(*origword);
     return 0;
-}*/
+}
+Problem 2
 
 #include <iostream>
-#include <string.h>
-#include <cmath>
-
+#include <iomanip>
 
 using namespace std;
 
-void Capitalize(char* input_ptr){
-    for(int i = 0; i < 79; i++){
+const int* GetMax(int* array, int size){
+    int *max = array;
+    for(int i = 0; i < size-1; i++){
+        if(*max <= array[i+1]){
+            *max = array[i+1];
+        }
+        }
+        return max;
+    }
+
+int main(){
+
+    int a[100] = {};
+    int num = 0;
+
+    cout << "Enter integers. Terminate with EOF."<<endl;
+    
+    do {cout << "a[" << num << "]: ";}
+    while (cin >> a[num++]);
+    --num;
+
+    cout << "The array has "<<num<<" elements: ";
+     for(int i = 0; i<num; ++i){
+        cout <<a[i]<<" ";
+    }
+    cout << endl;
+    int value = *GetMax(a, num);
+    cout << "Maximum : "<<value;
+    cout<<endl;
+    
+    return 0;
+}
+Problem 3
+
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+void Reverseinputstring(char input_array[], int length){
+    for(int i = 0; i < length/2; i++){
+        char temp = input_array[i];
+        input_array[i] = input_array[length - i - 1];
+        input_array[length-i-1] = temp;
     }
 }
 
 int main(){
     
-    int maxsize = 79;
+    int maxsize = 7;
     char origword[maxsize + 1];
     int string_length;
     
@@ -151,11 +190,48 @@ int main(){
     cin.clear();
     if(*origword){
         cout <<"You entered: "<<"\"" << origword << "\""<<endl;
-        Capitalize(origword);
-        cout << "Your input capitalized: " << origword;
+        string_length = strlen(origword);
+        Reverseinputstring(origword, string_length);
+        cout << "Your input reversed: " << "\"" << origword << "\""<<endl;
 
     }
     }
     while(*origword);
     return 0;
 }
+Problem 4
+
+#include <iostream>
+#include <string.h>
+#include <cctype>
+
+using namespace std;
+
+void Capitalize(char* input_ptr){
+
+    for(int i = 0; i < strlen(input_ptr); i++){
+        input_ptr[i] = toupper(input_ptr[i]);
+    }
+}
+
+int main(){
+    
+    int maxsize = 79;
+    char origword[maxsize + 1];
+
+    
+    do{
+    cout << "Please enter a line of text: ";
+    cin.getline(origword, maxsize);
+    cin.clear();
+    if(*origword){
+        cout <<"You entered: "<<"\"" << origword << "\""<<endl;
+        Capitalize(origword);
+        cout << "Your input capitalized: "<<origword<< "\""<<endl;
+
+    }
+    }
+    while(*origword);
+    return 0;
+}*/
+

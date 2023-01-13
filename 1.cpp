@@ -922,24 +922,22 @@ int main(){
     
     cout << "Please enter search key: ";
     cin >> key;
-}*/
+}
 
 #include <iostream>
+#include <string.h>
+#include <cctype>
 
 using namespace std;
 
-int* point(int *a){
-    cout << a <<endl;
-    cout << *a;
-    return a;
-}
-int nonpoint(int *a){
-    cout << a <<endl;
-    cout << *a;
-    return 0;
-}
+
+
 int main(){
-    int b = 2;
-    point(&b);
-    nonpoint(&b);
-}
+    char a[] = "table";
+   
+    for (int x=0; x<strlen(a); x++){
+        putchar(toupper(a[x]));}
+
+    return 0;
+}*/
+
