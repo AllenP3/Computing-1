@@ -38,19 +38,20 @@ int main(){
 
 using namespace std;
 
+
 void mirror(int a[], int size){
     for(int i = 0; i < size-1; i++){
         int temp = a[i];
         a[i] = a[i+1];
         a[i+1] = temp;
     }
-
 }
 
-void fun2 (int a[][2], int size){
+void fun2(int a[][2], int size){
     mirror(a[0], size);
     mirror(a[1], size);
 }
+
 void print(int a[][2], int size){
 
     for(int i = 0; i < size; i++){
@@ -64,15 +65,12 @@ void print(int a[][2], int size){
 
 int main(){
 
-    int a[2][2] = {{3, 2}, {5, 7}};
+    int a[][2] = {{3, 2}, {5, 7}};
     int size = 2;
 
     print(a, size);
     fun2(a, size);
     print(a, size);
 
-    
-   
-
-
+    return 0;
 }
