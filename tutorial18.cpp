@@ -38,7 +38,7 @@ int main(){
 
 using namespace std;
 
-void switcharray(int a[], int size){
+void mirror(int a[], int size){
     for(int i = 0; i < size-1; i++){
         int temp = a[i];
         a[i] = a[i+1];
@@ -46,22 +46,33 @@ void switcharray(int a[], int size){
     }
 
 }
-void print(int a[], int size){
+
+void fun2 (int a[][2], int size){
+    mirror(a[0], size);
+    mirror(a[1], size);
+}
+void print(int a[][2], int size){
 
     for(int i = 0; i < size; i++){
-        cout << a[i] << " ";
+        for(int j = 0; j < size; j++){
+            cout << a[i][j] << " ";
+        }
+        cout << endl;
     }
+    cout << endl;
 }
 
 int main(){
 
-    int a[] = {3, 2};
+    int a[2][2] = {{3, 2}, {5, 7}};
     int size = 2;
 
-    print(a, size);    
-    switcharray(a, size);
-    cout << endl;
     print(a, size);
+    fun2(a, size);
+    print(a, size);
+
+    
+   
 
 
 }
