@@ -7,7 +7,7 @@
  
 ~~Continue Statement, Break, ||, &&, !~~
 
-    char input;
+    char input;h
 
     for( int i = 1; i <= 10; i++){
         if (i == 7 || i == 5)
