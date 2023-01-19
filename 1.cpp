@@ -952,5 +952,35 @@ int main(){
 Update 17-01-2023
 */
 
+#include <vector>
+#include <iostream>
+#include <string.h>
 
+using namespace std;
+
+std::vector<char> encodeanddecode(std::vector<char> input,bool encode,unsigned int shift,char swa,char swb){
+    
+    if(encode = true){
+        vector<char> test;
+        int limit = input.size() - 1;
+        
+        for(int curpos = 0; curpos <=limit; curpos++){
+        char oldvalue = input[curpos];
+        char newvalue = (oldvalue+shift)%256;
+        if(newvalue = swa){
+            newvalue = swb;
+        }
+        else if(newvalue = swb){
+            newvalue = swa;
+        }
+    test.push_back(newvalue);
+    curpos++;
+    if(curpos > limit){
+        return test;
+        break;
+    }
+    
+    }
+}
+}
 
