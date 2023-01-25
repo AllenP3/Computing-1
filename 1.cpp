@@ -984,3 +984,11 @@ std::vector<char> encodeanddecode(std::vector<char> input,bool encode,unsigned i
 }
 }*/
 
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int arr[2] = {1, 2};
+}
