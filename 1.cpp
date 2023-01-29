@@ -988,7 +988,7 @@ std::vector<char> encodeanddecode(std::vector<char> input,bool encode,unsigned i
 
 using namespace std;
 
-int main()
-{
-    int arr[2] = {1, 2};
+int main(){
+    cout << "New monitor test";
+    return 0;
 }
