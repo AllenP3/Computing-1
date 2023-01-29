@@ -988,7 +988,21 @@ std::vector<char> encodeanddecode(std::vector<char> input,bool encode,unsigned i
 
 using namespace std;
 
+void swap(int a, int b){
+    int temp = a;
+    a = b;
+    b = temp;
+
+}
+
 int main(){
-    cout << "New monitor test";
-    return 0;
+
+    int sushi = 4;
+    int notsushi = 7;
+
+    cout << sushi << " "<< notsushi;
+    cout << endl;
+    swap(sushi, notsushi);
+
+    cout << sushi << " "<< notsushi;
 }
