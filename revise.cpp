@@ -10,7 +10,6 @@ int main(){
     bool is_true = false;
 
 
-
     cout << boolalpha << is_true <<endl;
 }
 
@@ -31,3 +30,4 @@ int main(){
 
 //floating point numbers : float, double, long double
 //77000 = 7.7E4
+// Precision : float < double < long double
