@@ -112,7 +112,7 @@ dowhile();
     //cin >> age;
     /*switch(age){
         case 13:
-            cout << "You are 13";
+            cout << "You are 13";   
             break;
         case 18:
             cout << "You are 18";
